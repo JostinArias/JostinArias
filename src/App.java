@@ -51,6 +51,7 @@ public class App {
     }
 
     
+    //método llenado y tomamos en cuenta las excepxiones q se puede dar al pones los datos del llenado;
     public static int[] llenado() {
     
         int[] arreglo = new int[tamv];
