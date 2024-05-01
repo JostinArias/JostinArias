@@ -25,7 +25,7 @@ public class App {
             } catch (Exception e) {
                 System.out.println(e);
 
-                System.out.println("Ocurrio algo revisar, parece que estas ingresando datos enteros");
+                System.out.println("Ocurrio algo revisar, parece que no estas ingresando datos enteros");
 
                 leer.nextLine();
 
@@ -51,7 +51,7 @@ public class App {
     }
 
     
-    //método llenado y tomamos en cuenta las excepxiones q se puede dar al pones los datos del llenado;
+    //métodollenado y tomamos en cuenta las excepxiones q se puede dar al pones los datos del llenado;
     public static int[] llenado() {
     
         int[] arreglo = new int[tamv];
