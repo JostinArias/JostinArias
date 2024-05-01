@@ -16,14 +16,19 @@ public class App {
             try {
 
                 System.out.println(
-                        "Ingrese el tamaño del arreglo que no supere los 16 y sea mayor a 1 y que tampoco sea negativo ");
+                "Ingrese el tamaño del arreglo que no supere los 16 y sea mayor a 1 y que tampoco sea negativo ");
                 tamv = leer.nextInt();//10
+
                 condiciosalida = (tamv >= 2 && tamv <= 16) ? false : true;
+
 
             } catch (Exception e) {
                 System.out.println(e);
+
                 System.out.println("Ocurrio algo revisar, parece que estas ingresando datos enteros");
+
                 leer.nextLine();
+
             }
 
         } while (condiciosalida);
@@ -36,20 +41,31 @@ public class App {
         Mostrar(array);
         
         int[] arrayInvertido = Invertir(array);
+
         System.out.println("Arreglo invertido:");
+
         Mostrar(arrayInvertido);
+
         System.out.println("Amén");
+
     }
 
     
     public static int[] llenado() {
-
+    
         int[] arreglo = new int[tamv];
 
         for (int i = 0; i < arreglo.length; i++) {
-            System.out.println("ingrese el valo [" + i + "]");
-            arreglo[i] = leer.nextInt();
+            try {
+                System.out.println("ingrese el valo [" + i + "]");
+                arreglo[i] = leer.nextInt();
+            } catch (Exception e) {
+                System.out.println(e);
+                i--;
+                leer.nextLine();
+            }
         }
+
         //Hay que hacer que mire bonito
 
         return arreglo;
@@ -79,7 +95,9 @@ public class App {
         for (int i = 0, j = a.length - 1; i < a.length; i++, j--) {
             invertido[i] = a[j];
         }
+
         return invertido;
+
     }
     
 }
